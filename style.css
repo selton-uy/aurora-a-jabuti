@@ -1,0 +1,55 @@
+@import url(assets/switch.css);
+:root {    
+    --fonte: Poppins
+}
+[data-contexto = "claro"]{
+    --cor-de-fundo: linear-gradient(#69b1c9, #96d8e5, #F1EEDC);
+    --azul: #69b1c9;
+    --cor-da-borda: #26acf9;
+    --cor-da-fonte: black;
+    transition: 2s ease-in-out
+}
+[data-contexto = "escuro"]{
+    --cor-de-fundo: linear-gradient(#0d1b4f, #18174a, #000000);
+    --azul: #69b1c9;
+    --cor-da-borda: #97bed4;
+    --cor-da-fonte: #F2F2F2;
+    transition: 2s ease-in-out;
+}
+body {
+    background: var(--cor-de-fundo);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    font-family: var(--fonte);
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    padding: 30% 0 10%;
+}
+
+.img {
+    width: 80vw;
+    border-radius: 100%;
+    border: solid var(--cor-da-borda);
+    margin: 2rem 0;
+    transition: 0.5s ease-in-out;
+}
+.dark{
+    filter: brightness(50%);
+}
+.titulo, .texto{
+    color: var(--cor-da-fonte);
+}
+.texto {
+    font-family: var(--fonte);
+    font-size: 1.25rem;
+    text-align: center;
+    padding-bottom: 2%;
+}
